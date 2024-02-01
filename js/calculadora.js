@@ -3,7 +3,7 @@ let nro2 = 0;
 let resultado = 0;
 let iterador = 0;
 alert("Hola!")
-var nombre =prompt("Cuál es tu nombre?", "Ingresá tu nombre acá")
+let nombre =prompt("Cuál es tu nombre?", "Ingresá tu nombre acá")
 alert(nombre + ", cómo estás? Esta es una calculadora. A continuación vas a elegir el tipo de operación.")
 let operacion = prompt("Qué tipo de operación querés usar? \n 1 es Suma \n 2 es Resta \n 3 es Multiplicación \n 4 es división")
 if(operacion==1){
