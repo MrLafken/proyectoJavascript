@@ -27,11 +27,13 @@ function despliegueMenu(nombreUsuario) {
     
     let divIzq = document.getElementById("divIzq");
     let divDesplegable = document.createElement("div");
+
     divIzq.appendChild(divDesplegable);
     divDesplegable.innerHTML = `<h2 class="margen"> Qué deseas hacer ${nombreUsuario}?</h2>
     <button id="botonAgregarProducto" class="centrar boton">Agregar Producto</button>
     <button id="botonComprarProducto" class="centrar boton">Comprar Producto</button>
     `;
+
     let botonAgregarProducto = document.getElementById("botonAgregarProducto");
     botonAgregarProducto.addEventListener("click", function constructorProductos(nombreProducto,talle,precio,i){
         let cantidadProductos = parseInt(prompt("Cuántos productos querés agregar?"))
@@ -41,6 +43,7 @@ function despliegueMenu(nombreUsuario) {
             this.precio = parseFloat(prompt("Ingrese el precio del producto " + (i+1)));
             crearProducto(nombreProducto,talle,precio,i)
         }
+        console.log(productos[i])
     })
 
     let botonComprarProducto = document.getElementById("botonComprarProducto");
