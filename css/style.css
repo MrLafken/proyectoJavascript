@@ -1,0 +1,41 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.mainClass{
+    padding: 3rem;
+    width: 100%;
+    height: 400px;
+    text-align: center;
+    background-color: rgb(90, 35, 35);
+}
+
+.d-flex{
+    display: flex;
+}
+.centrar{
+    justify-content: center;
+    align-items: center;
+}
+.divTipo1{
+    width: 50%;
+    justify-content: center;
+}
+
+.of-hidden{
+    overflow: hidden;
+}
+
+.inputClass{
+    width: auto;
+    max-height: 70px;
+    margin: 0px 20px 0px 20px;
+}
+.margen{
+    margin: 2rem;
+}
+.boton{
+    width: 200px;
+    height: 70px;
+}
