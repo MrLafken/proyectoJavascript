@@ -17,16 +17,17 @@ let productos = [];
 let botonEntrada = document.getElementById("botonEntrada");
 botonEntrada.addEventListener("click", function saludo() {
     let nombreUsuario = document.getElementById("nombre").value;
+    sessionStorage.setItem("Nombre de Usuario", nombreUsuario);
     console.log(nombreUsuario + " Se ha registrado");
     let tituloIzq = document.getElementById("h1Izq");
-    tituloIzq.innerText = "Hola " + nombreUsuario + "!";
+    tituloIzq.innerText = "Hola " + sessionStorage.getItem("Nombre de Usuario") + "!";
     despliegueMenu(nombreUsuario);
 });
 
 function despliegueMenu(nombreUsuario) {
     
     let divIzq = document.getElementById("divIzq");
-    let divDesplegable = document.createElement("div");
+    let divDesplegable = document.createElement("div"); 
 
     divIzq.appendChild(divDesplegable);
     divDesplegable.innerHTML = `<h2 class="margen"> Qué deseas hacer ${nombreUsuario}?</h2>
@@ -72,12 +73,6 @@ for(Producto of productos)
 
 
 /*
-alert(nombreUsuario + ", cómo estás? Esta es la tienda online de merchandising de Airbag.")
-let operacion = prompt("Qué querés hacer? \n 1 Comprar Productos \n 2 Agregar productos (Sólo admins)")*/
-
-/*if(operacion == 1){
-    alert("1")
-}
 else if(operacion==2){
     if(nombreUsuario=="Andy"){
         let cantidadProductos = parseInt(prompt("Cuántos productos querés agregar?"))
